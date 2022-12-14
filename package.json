@@ -29,6 +29,7 @@
     "dev-server": "^0.2.0",
     "eslint": "^8.29.0",
     "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-react": "^7.31.11",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.0",
