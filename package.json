@@ -41,6 +41,7 @@
   },
   "dependencies": {
     "core-js": "^3.26.1",
+    "npm": "^9.2.0",
     "webpack-dev-server": "^4.11.1"
   }
 }
