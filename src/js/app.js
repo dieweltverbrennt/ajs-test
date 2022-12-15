@@ -1,8 +1,5 @@
 export default function healthStatus(data) {
   let health;
-  if (data.name === undefined || data.health === undefined || typeof data.health === 'string') {
-    return 0;
-  }
 
   if (data.health > 50) {
     health = 'healthy';

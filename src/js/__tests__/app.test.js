@@ -1,15 +1,21 @@
 import healthStatus from '../app';
 
-test.each([
-  [{ name: 'Mar', health: 100 }, 'healthy'],
-  [{ name: 'Mar', health: 50 }, 'wounded'],
-  [{ name: 'Mar', health: 25 }, 'wounded'],
-  [{ name: 'Mar', health: 10 }, 'critical'],
-  [{ name: 'Mar', health: 0 }, 'dead'],
-])(
-  ('healtStatus equal %s'),
-  (data, expected) => {
-    const result = healthStatus(data);
-    expect(result).toBe(expected);
-  },
-);
+test('should be healthy', () => {
+  const result = healthStatus({ name: 'Маг', health: 90 });
+  expect(result).toBe('healthy');
+});
+
+test('should be wounded', () => {
+  const result = healthStatus({ name: 'Маг', health: 40 });
+  expect(result).toBe('wounded');
+});
+
+test('should be critical', () => {
+  const result = healthStatus({ name: 'Маг', health: 10 });
+  expect(result).toBe('critical');
+});
+
+test('should be dead', () => {
+  const result = healthStatus({ name: 'Маг', health: 0 });
+  expect(result).toBe('dead');
+});
